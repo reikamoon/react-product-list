@@ -1,6 +1,6 @@
 import data from './data.json';
 
-const categories = data.map( item => item.category )
+const categories = data.map( item => item.category ).sort();
 
 // Make an object where each key is a category name
 const categoryObjects = categories.reduce((obj, cat) => {

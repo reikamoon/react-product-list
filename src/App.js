@@ -1,5 +1,6 @@
 import data, { categories, productCount, categoriesAndCount, categoriesUnique } from './data';
 import React, { useState } from 'react';
+import Product from './Product/Product';
 import './App.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
   return (
     <div className="App">
     <h1>{listCat}</h1>
+    <Product />
     </div>
   );
 }
