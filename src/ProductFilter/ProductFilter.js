@@ -1,5 +1,6 @@
 import React from 'react'
 import data from '../data.js';
+import './ProductFilter.css';
 
 
 export default function ProductNcp(props) {
@@ -18,7 +19,7 @@ export default function ProductNcp(props) {
 
 
 
-     <div className="ProductText" key={index}>
+     <div className="Product" key={index}>
         <h1> {item.name}, <i class="far fa-star"></i>{item.rating}</h1>
         <h2>{item.price}</h2>
         <p>{item.description}</p>
