@@ -3,11 +3,13 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const listCat = categoriesUnique.map((category) =>
+  <button class="categorybutton">{category}</button>
+  );
 
   return (
-    <div>
-    <h1>{categoriesUnique}</h1>
-    
+    <div className="App">
+    <h1>{listCat}</h1>
     </div>
   );
 }

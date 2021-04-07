@@ -8,7 +8,6 @@ const categoryObjects = categories.reduce((obj, cat) => {
   return obj
 }, {}) // !!! Be sure to define the initial value as an Object!
 
-
 // Make an arr array of the keys
 const categoriesUnique = Object.keys(categoryObjects)
 
