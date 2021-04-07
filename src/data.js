@@ -26,7 +26,6 @@ const categoriesWithCounts = categories.reduce((obj, cat) => {
   }
   return obj
 }, {}) // !!! Be sure to define the initial value as an Object!
-console.log(categoriesWithCounts)
 
 const productCount = categoriesUnique.reduce((acc, item) => {
     acc.push({ name: item, count: categoriesWithCounts[item] })
