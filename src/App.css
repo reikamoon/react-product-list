@@ -4,9 +4,10 @@ body {
 
 .App {
   text-align: center;
+  color: white;
 }
 
-.categorybutton {
+button {
   /* Green */
   border: none;
   border-radius: 12px;
@@ -17,7 +18,7 @@ body {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 19px;
+  font-size: 20px;
 }
 
 .App-logo {

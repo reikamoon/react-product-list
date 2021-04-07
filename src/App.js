@@ -1,17 +1,16 @@
 import data, { categories, productCount, categoriesAndCount, categoriesUnique } from './data';
 import React, { useState } from 'react';
-import Product from './Product/Product';
+import Product from './Product/Products'
+import ProductNcp from './ProductFilter/ProductFilter';
 import './App.css';
 
 function App() {
-  const listCat = categoriesUnique.map((category) =>
-  <button class="categorybutton">{category}</button>
-  );
+  const [category, setCategory] = useState('All');
 
   return (
     <div className="App">
-    <h1>{listCat}</h1>
-    <Product />
+     <Product category={category} setCategory={setCategory} />
+     <ProductNcp category={category} />
     </div>
   );
 }
