@@ -2,7 +2,7 @@ import React from 'react'
 import data from '../data.js';
 
 
-export default function ProductNcp(props) {
+export default function ProductFilter(props) {
 
     const { category } = props
 
@@ -11,7 +11,12 @@ export default function ProductNcp(props) {
         if (item.category === category) {
             return true
         }
+        if(item.category === "All") {
+            return true
+        }
+
         return false
+
 
     }).map((item, index) => {
         return (
@@ -35,3 +40,4 @@ export default function ProductNcp(props) {
         </div>
     )
 }
+

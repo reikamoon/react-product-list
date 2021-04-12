@@ -6,6 +6,7 @@ import './Product.css'
 export default function Products(props) {
     const { category, setCategory } = props
     // a list of buttons 
+
     const display_cat = categoriesUnique.map((item, index) => {
         return (
             <button

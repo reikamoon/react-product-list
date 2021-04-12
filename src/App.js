@@ -1,7 +1,7 @@
 import data, { categories, productCount, categoriesAndCount, categoriesUnique } from './data';
 import React, { useState } from 'react';
 import Product from './Product/Products'
-import ProductNcp from './ProductFilter/ProductFilter';
+import ProductFilter from './ProductFilter/ProductFilter';
 import './App.css';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
      <Product category={category} setCategory={setCategory} />
-     <ProductNcp category={category} />
+     <ProductFilter category={category} />
     </div>
   );
 }
