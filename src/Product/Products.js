@@ -9,6 +9,7 @@ export default function Products(props) {
 
     const display_cat = categoriesUnique.map((item, index) => {
         return (
+            <div>
             <button
                 className="button-items"
                 key={index}
@@ -18,6 +19,12 @@ export default function Products(props) {
                 }}
             >{item}
             </button>
+            <button
+              category={'all'}
+              onClick={() => {
+                return setCategory('all')
+              }}/>
+              </div>
         )
     })
     return (

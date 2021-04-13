@@ -7,6 +7,26 @@ import './App.css';
 function App() {
   const [category, setCategory] = useState('All');
 
+  const display_cat = categoriesUnique.map((item, index) => {
+        return (
+            <div>
+            <button
+                className="button-items"
+                key={index}
+                onClick={() => {
+                    setCategory(item)
+
+                }}
+            >{item}
+            </button>
+            <button
+              category={'all'}
+              onClick={() => {
+                setCategory('all')
+              }}/>
+              </div>
+        )
+    })
   return (
     <div className="App">
      <Product category={category} setCategory={setCategory} />

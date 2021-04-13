@@ -12,6 +12,7 @@ export default function ProductFilter(props) {
             return true
         }
         if(item.category === "All") {
+            display_cat.push('All')
             return true
         }
 
@@ -20,7 +21,7 @@ export default function ProductFilter(props) {
 
     }).map((item, index) => {
         return (
-
+            
 
 
      <div className="Product" key={index}>
