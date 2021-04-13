@@ -9,7 +9,6 @@ function App() {
 
   const display_cat = categoriesUnique.map((item, index) => {
         return (
-            <div>
             <button
                 className="button-items"
                 key={index}
@@ -19,18 +18,18 @@ function App() {
                 }}
             >{item}
             </button>
-            <button
-              category={'all'}
-              onClick={() => {
-                setCategory('all')
-              }}/>
-              </div>
         )
     })
   return (
     <div className="App">
-     <Product category={category} setCategory={setCategory} />
-     <ProductFilter category={category} />
+     {display_cat}
+     <button
+            className="button-items"
+              category={'All'}
+              label="All"
+              onClick={() => {
+                setCategory('All')
+              }}/>
     </div>
   );
 }
