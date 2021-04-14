@@ -32,10 +32,12 @@ const productCount = categoriesUnique.reduce((acc, item) => {
     return acc
 }, [])
 console.log(productCount)
+console.log(categoriesWithCounts)
 
 export {
     categories,
     categoriesUnique,
+    categoriesWithCounts,
     productCount,
 
 }

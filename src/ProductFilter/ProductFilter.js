@@ -7,24 +7,27 @@ export default function ProductFilter(props) {
     const { category } = props
 
 
-    const display_cat = data.filter((item, index) => {
-        if (item.category === category) {
-            return true
-        }
-        if(item.category === "All") {
-            display_cat.push('All')
-            return true
-        }
+    const display_cat = data.filter((item) => {
 
-        return false
+        return item.category === category || category === "All"
+
+        // if (item.category === category) {
+        //     return true
+        // }
+        // if(item.category === "All") {
+        //     display_cat.push('All')
+        //     return true
+        // }
+
+        // return false
 
 
-    }).map((item, index) => {
+    }).map((item) => {
         return (
             
 
 
-     <div className="Product" key={index}>
+     <div className="Product">
         <h1> {item.name}, <i class="far fa-star"></i>{item.rating}</h1>
         <h2>{item.price}</h2>
         <p>{item.description}</p>

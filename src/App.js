@@ -7,11 +7,10 @@ import './App.css';
 function App() {
   const [category, setCategory] = useState('All');
 
-  const display_cat = categoriesUnique.map((item, index) => {
+  const display_cat = categoriesUnique.map((item) => {
         return (
             <button
                 className="button-items"
-                key={index}
                 onClick={() => {
                     setCategory(item)
 
@@ -22,14 +21,16 @@ function App() {
     })
   return (
     <div className="App">
-     {display_cat}
+    {display_cat}
      <button
             className="button-items"
-              category={'All'}
-              label="All"
-              onClick={() => {
+            category={'All'}
+            onClick={() => {
                 setCategory('All')
-              }}/>
+              }}
+              >All {data.length}
+              </button>
+      <ProductFilter category={category} />
     </div>
   );
 }
